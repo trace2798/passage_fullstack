@@ -1,5 +1,4 @@
 import DashboardContent from "@/components/DashboardContent";
-import LogoutButton from "@/components/LogoutButton";
 import Navbar from "@/components/Navbar";
 import { FC } from "react";
 

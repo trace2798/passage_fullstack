@@ -1,6 +1,9 @@
 "use client";
 import { FC, useEffect, useState } from "react";
-import { getCurrentUserInfo, PassageUserInfo } from "@/actions/getCurrentUserInfo";
+import {
+  getCurrentUserInfo,
+  PassageUserInfo,
+} from "@/actions/getCurrentUserInfo";
 import LogoutButton from "./LogoutButton";
 import Link from "next/link";
 import { format } from "date-fns";
@@ -27,6 +30,8 @@ const DashboardContent: FC<DashboardContentProps> = ({}) => {
     // Render loading state if the session information is still being fetched
     return <div>Loading...</div>;
   }
+  const userId = userInfo?.id || "";
+  // const { userPosts } = usePostByUserId(userId);
 
   if (!userInfo) {
     // Render the message if the session doesn't exist
