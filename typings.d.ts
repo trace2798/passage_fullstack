@@ -7,3 +7,12 @@ declare namespace JSX {
         "passage-profile": PassageProfileElement;
     }
 }
+
+
+interface Post {
+    id: string;
+    createdAt: Date;
+    content: string;
+    authorId: string;
+  }
+  
