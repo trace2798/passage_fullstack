@@ -12,6 +12,9 @@ import {
   PassageUserInfo,
   getCurrentUserInfo,
 } from "@/actions/getCurrentUserInfo";
+import { format } from "date-fns";
+import { Button } from "./ui/button";
+import Link from "next/link";
 interface SettingsContentProps {}
 
 const SettingsContent: FC<SettingsContentProps> = ({}) => {
@@ -30,6 +33,14 @@ const SettingsContent: FC<SettingsContentProps> = ({}) => {
     fetchSessionInfo();
   }, []);
 
+  let formattedCreatedAt = "";
+  if (userInfo?.created_at) {
+    formattedCreatedAt = format(
+      new Date(userInfo.created_at),
+      "yyyy-MM-dd HH:mm:ss"
+    );
+  }
+
   const info = [
     {
       title: "Your email id",
@@ -37,7 +48,7 @@ const SettingsContent: FC<SettingsContentProps> = ({}) => {
     },
     {
       title: "Account created at",
-      description: `${userInfo?.created_at}`,
+      description: `${formattedCreatedAt}`,
     },
     {
       title: "Number of times logged in",
@@ -49,6 +60,7 @@ const SettingsContent: FC<SettingsContentProps> = ({}) => {
     // Render loading state if the session information is still being fetched
     return <div>Loading...</div>;
   }
+
   return (
     <>
       <Card className="w-[350px]">
@@ -77,9 +89,9 @@ const SettingsContent: FC<SettingsContentProps> = ({}) => {
           </div>
         </CardContent>
         <CardFooter>
-          {/* <Button className="w-full">
-              <Check className="mr-2 h-4 w-4" /> Mark all as read
-            </Button> */}
+          <Button className="w-full">
+            <Link href="/">Back to Home </Link>
+          </Button>
         </CardFooter>
       </Card>
     </>
