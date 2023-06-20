@@ -47,6 +47,10 @@ const SettingsContent: FC<SettingsContentProps> = ({}) => {
       description: `${userInfo?.email}`,
     },
     {
+      title: "Your User Id",
+      description: `${userInfo?.id}`,
+    },
+    {
       title: "Account created at",
       description: `${formattedCreatedAt}`,
     },
@@ -69,6 +73,7 @@ const SettingsContent: FC<SettingsContentProps> = ({}) => {
           <CardDescription>Your Information</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">
+          {userInfo?.name}
           <div>
             {info.map((notification, index) => (
               <div

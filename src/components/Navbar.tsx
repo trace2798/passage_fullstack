@@ -39,7 +39,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         <h1>Navbar</h1>
         <UserAccountNav
           email={userInfo?.email}
-          created_at={userInfo?.email}
+          created_at={userInfo?.created_at}
           login_count={userInfo?.login_count}
         />
       </div>
