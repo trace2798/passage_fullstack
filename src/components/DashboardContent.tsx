@@ -7,6 +7,7 @@ import {
 import LogoutButton from "./LogoutButton";
 import Link from "next/link";
 import { format } from "date-fns";
+import CustomFeed from "./homepage/CustomFeed";
 
 interface DashboardContentProps {}
 
@@ -30,7 +31,7 @@ const DashboardContent: FC<DashboardContentProps> = ({}) => {
     // Render loading state if the session information is still being fetched
     return <div>Loading...</div>;
   }
-  const userId = userInfo?.id || "";
+
   // const { userPosts } = usePostByUserId(userId);
 
   if (!userInfo) {
@@ -81,6 +82,7 @@ const DashboardContent: FC<DashboardContentProps> = ({}) => {
               Account created at:
               <br /> <b> {formattedCreatedAt}</b>
             </p>
+            {/* <CustomFeed {...userInfo} /> */}
             <LogoutButton />
           </div>
         </div>
