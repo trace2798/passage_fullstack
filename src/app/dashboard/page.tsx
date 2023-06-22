@@ -1,5 +1,7 @@
+import CreatePost from "@/components/CreatePost";
 import DashboardContent from "@/components/DashboardContent";
 import Navbar from "@/components/Navbar";
+import CustomFeed from "@/components/homepage/CustomFeed";
 // import CustomFeed from "@/components/homepage/CustomFeed";
 import { FC } from "react";
 
@@ -10,9 +12,11 @@ const page: FC<pageProps> = async ({}) => {
   return (
     <>
       <Navbar />
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      {/* <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <DashboardContent />
-      </main>
+      </main> */}
+      <CreatePost/>
+      <CustomFeed/>
     </>
   );
 };

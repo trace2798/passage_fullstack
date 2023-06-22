@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { PostCreationRequest } from "@/lib/validators/post";
 import { useMutation } from "@tanstack/react-query";
-import axios,  { AxiosError } from "axios";
+import axios, { AxiosError } from "axios";
 import { useRouter } from "next/navigation";
 import { FC, useState } from "react";
 
 interface pageProps {}
 
-const page: FC<pageProps> = ({}) => {
+const CreatePost: FC<pageProps> = ({}) => {
   const router = useRouter();
   const [input, setInput] = useState<string>("");
   const { mutate: createPost, isLoading } = useMutation({
@@ -24,7 +24,7 @@ const page: FC<pageProps> = ({}) => {
     onError: (err) => {
       if (err instanceof AxiosError) {
         if (err.response?.status === 409) {
-          return "Error"
+          return "Error";
           // toast({
           //   title: "Subreddit already exists.",
           //   description: "Please choose a different name.",
@@ -33,7 +33,7 @@ const page: FC<pageProps> = ({}) => {
         }
 
         if (err.response?.status === 422) {
-          return 
+          return;
           // toast({
           //   title: "Invalid subreddit name.",
           //   description: "Please choose a name between 3 and 21 letters.",
@@ -42,7 +42,7 @@ const page: FC<pageProps> = ({}) => {
         }
 
         if (err.response?.status === 401) {
-          return ;
+          return;
         }
       }
 
@@ -103,4 +103,4 @@ const page: FC<pageProps> = ({}) => {
   );
 };
 
-export default page;
+export default CreatePost;
