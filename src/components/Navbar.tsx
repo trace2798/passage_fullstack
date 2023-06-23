@@ -48,10 +48,12 @@ const Navbar: FC<NavbarProps> = ({}) => {
         ) : (
           <>
             <div className="w-full flex justify-between">
-              <div className="inline-flex items-center">
-                <Milestone className="mr-2" />
-                <h1 className="font-black text-xl">Post It</h1>
-              </div>
+              <Link href="/">
+                <div className="inline-flex items-center">
+                  <Milestone className="mr-2" />
+                  <h1 className="font-black text-xl">Post It</h1>
+                </div>
+              </Link>
               <UserAccountNav
                 email={userInfo?.email}
                 created_at={userInfo?.created_at}

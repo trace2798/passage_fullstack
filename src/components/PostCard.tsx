@@ -17,7 +17,7 @@ const PostComponent: FC<PostComponentProps> = ({ post }) => {
   const formattedTime = formatTimeToNow(post.createdAt);
   return (
     <>
-      <Card>
+      <Card className="md:w-[50vw]">
         <CardHeader className="flex flex-col md:flex-row justify-between">
           <span className="text-indigo-500">{post.authorId}</span>
           <span>{formattedTime}</span>

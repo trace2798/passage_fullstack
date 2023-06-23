@@ -2,7 +2,6 @@ import Providers from "@/components/Providers";
 import "../styles/globals.css";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
