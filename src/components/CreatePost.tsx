@@ -42,14 +42,14 @@ const CreatePost: FC<pageProps> = ({}) => {
   return (
     <>
       <div className="w-full flex items-center h-full max-w-3xl mx-auto">
-        <div className="relative bg-white w-full h-fit p-4 rounded-lg space-y-6">
+        <div className="relative bg-white dark:bg-slate-800 w-full h-fit p-4 rounded-lg space-y-6">
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-satoshiMedium">
               Create a milestone, memory you want to share.
             </h1>
           </div>
 
-          <hr className="bg-red-500 h-px" />
+          <hr className="bg-red-500 dark:bg-indigo-200 h-[2px]" />
 
           <div>
             <p className="text-lg font-satoshiMedium">Content</p>
@@ -57,7 +57,7 @@ const CreatePost: FC<pageProps> = ({}) => {
               Post cannot be changed.
             </p>
             <div className="relative">
-              <p className="absolute  text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400"></p>
+              <p className="absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400"></p>
               <Input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -74,7 +74,10 @@ const CreatePost: FC<pageProps> = ({}) => {
             >
               Cancel
             </Button>
-            <Button disabled={isLoading || input.length === 0} onClick={() => createPost()}>
+            <Button
+              disabled={isLoading || input.length === 0}
+              onClick={() => createPost()}
+            >
               Publish Post
             </Button>
           </div>

@@ -9,7 +9,11 @@ const Auth: FC<AuthProps> = () => {
   }, []);
   return (
     <>
-      <passage-auth app-id={process.env.NEXT_PUBLIC_PASSAGE_APP_ID}></passage-auth>
+      <div className="bg-neutral-200 rounded-lg">
+        <passage-auth
+          app-id={process.env.NEXT_PUBLIC_PASSAGE_APP_ID}
+        ></passage-auth>
+      </div>
     </>
   );
 };

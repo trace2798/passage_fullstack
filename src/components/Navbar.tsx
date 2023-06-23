@@ -8,6 +8,7 @@ import { UserAccountNav } from "./UserAccountNav";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Milestone } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 interface NavbarProps {}
 
@@ -41,9 +42,12 @@ const Navbar: FC<NavbarProps> = ({}) => {
               <Milestone className="mr-2" />
               <h1 className="font-satoshiBlack text-xl">Post It</h1>
             </div>
-            <Link href="/auth">
-              <Button>Log In</Button>
-            </Link>
+            <div>
+              <ThemeToggle/>
+              <Link href="/auth">
+                <Button>Log In</Button>
+              </Link>
+            </div>
           </div>
         ) : (
           <>
@@ -54,11 +58,14 @@ const Navbar: FC<NavbarProps> = ({}) => {
                   <h1 className="font-satoshiBlack text-xl">Post It</h1>
                 </div>
               </Link>
+              <div>
+                <ThemeToggle/>
               <UserAccountNav
                 email={userInfo?.email}
                 created_at={userInfo?.created_at}
                 login_count={userInfo?.login_count}
               />
+              </div>
             </div>
           </>
         )}
