@@ -5,6 +5,8 @@ import {
 } from "@/actions/getCurrentUserInfo";
 import { FC, useEffect, useState } from "react";
 import { UserAccountNav } from "./UserAccountNav";
+import Link from "next/link";
+import { Button } from "./ui/button";
 
 interface NavbarProps {}
 
@@ -30,18 +32,32 @@ const Navbar: FC<NavbarProps> = ({}) => {
   }
 
   if (!userInfo) {
-    <h1>Not logged in</h1>;
+    <div className="p-5 border border-black flex justify-between">
+      <h1>Navbar not logged in </h1>
+      <h1>Log In</h1>
+    </div>;
   }
 
   return (
     <>
       <div className="p-5 border border-black flex justify-between">
-        <h1>Navbar</h1>
-        <UserAccountNav
-          email={userInfo?.email}
-          created_at={userInfo?.created_at}
-          login_count={userInfo?.login_count}
-        />
+        {!userInfo ? (
+          <div className="p-5 w-full border border-black inline-flex justify-between">
+            <h1>Post It</h1>
+            <Link href="/auth">
+              <Button>Log In</Button>
+            </Link>
+          </div>
+        ) : (
+          <>
+            <Link href='/'>Post It</Link>
+            <UserAccountNav
+              email={userInfo?.email}
+              created_at={userInfo?.created_at}
+              login_count={userInfo?.login_count}
+            />
+          </>
+        )}
       </div>
     </>
   );

@@ -67,9 +67,9 @@ const CreatePost: FC<pageProps> = ({}) => {
           <hr className="bg-red-500 h-px" />
 
           <div>
-            <p className="text-lg font-medium">Title</p>
+            <p className="text-lg font-medium">Content</p>
             <p className="text-xs pb-2">
-              Post including capitalization cannot be changed.
+              Post cannot be changed.
             </p>
             <div className="relative">
               <p className="absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400"></p>
@@ -94,7 +94,7 @@ const CreatePost: FC<pageProps> = ({}) => {
               disabled={input.length === 0}
               onClick={() => createPost()}
             >
-              Create Community
+              Publish Post
             </Button>
           </div>
         </div>

@@ -18,10 +18,13 @@ const PostComponent: FC<PostComponentProps> = ({ post }) => {
   return (
     <>
       <Card>
-        <CardHeader>{post.content}</CardHeader>
+        <CardHeader className="flex flex-col md:flex-row justify-between">
+          <span className="text-indigo-500">{post.authorId}</span>
+          <span>{formattedTime}</span>
+        </CardHeader>
         <CardContent>
-          <p>By: {post.authorId}</p>
-          <p>{formattedTime}</p>
+          <p>{post.content} </p>
+          <p></p>
         </CardContent>
       </Card>
     </>
