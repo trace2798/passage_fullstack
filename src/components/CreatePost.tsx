@@ -41,7 +41,7 @@ const CreatePost: FC<pageProps> = ({}) => {
   });
   return (
     <>
-      <div className="container flex items-center h-full max-w-3xl mx-auto">
+      <div className="w-full flex items-center h-full max-w-3xl mx-auto">
         <div className="relative bg-white w-full h-fit p-4 rounded-lg space-y-6">
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-satoshiMedium">
@@ -68,13 +68,13 @@ const CreatePost: FC<pageProps> = ({}) => {
 
           <div className="flex justify-end gap-4">
             <Button
-              disabled={isLoading}
+              disabled={isLoading || input.length === 0}
               variant="ghost"
               onClick={() => router.back()}
             >
               Cancel
             </Button>
-            <Button disabled={isLoading} onClick={() => createPost()}>
+            <Button disabled={isLoading || input.length === 0} onClick={() => createPost()}>
               Publish Post
             </Button>
           </div>
