@@ -30,12 +30,13 @@ const CreatePost: FC<pageProps> = ({}) => {
       });
     },
     onSuccess: () => {
-      router.push(`/feed`);
+      router.push(`/dashboard`);
       toast({
         title: "Post created successfully.",
         description: "Your post has been published.",
         variant: "default",
       });
+      setInput("");
     },
   });
   return (
@@ -43,7 +44,7 @@ const CreatePost: FC<pageProps> = ({}) => {
       <div className="container flex items-center h-full max-w-3xl mx-auto">
         <div className="relative bg-white w-full h-fit p-4 rounded-lg space-y-6">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold">
+            <h1 className="text-xl font-satoshiMedium">
               Create a milestone, memory you want to share.
             </h1>
           </div>
@@ -51,10 +52,12 @@ const CreatePost: FC<pageProps> = ({}) => {
           <hr className="bg-red-500 h-px" />
 
           <div>
-            <p className="text-lg font-medium">Content</p>
-            <p className="text-xs pb-2">Post cannot be changed.</p>
+            <p className="text-lg font-satoshiMedium">Content</p>
+            <p className="text-xs pb-2 font-ranadeLightItalic">
+              Post cannot be changed.
+            </p>
             <div className="relative">
-              <p className="absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400"></p>
+              <p className="absolute  text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400"></p>
               <Input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -71,7 +74,7 @@ const CreatePost: FC<pageProps> = ({}) => {
             >
               Cancel
             </Button>
-            <Button disabled={input.length === 0} onClick={() => createPost()}>
+            <Button disabled={isLoading} onClick={() => createPost()}>
               Publish Post
             </Button>
           </div>

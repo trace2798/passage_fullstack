@@ -24,7 +24,7 @@ const CustomFeed = async ({}) => {
     <>
       {" "}
       <div className="mt-10">
-        <h1 className="bg-gradient-to-r bg-clip-text text-transparent from-slate-900  to-slate-200 text-3xl lg:text-5xl font-bold text-left w-full lg:px-[10vw]">
+        <h1 className="bg-gradient-to-r bg-clip-text text-transparent from-slate-900  to-slate-200 text-3xl lg:text-5xl font-bold text-left w-full lg:px-[10vw] font-satoshiBold">
           Your Past Post
         </h1>
         <PostFeed initialPosts={posts} />
