@@ -30,7 +30,7 @@ const CreatePost: FC<pageProps> = ({}) => {
       });
     },
     onSuccess: () => {
-      router.push(`/dashboard`);
+      router.refresh();
       toast({
         title: "Post created successfully.",
         description: "Your post has been published.",

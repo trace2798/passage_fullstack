@@ -3,6 +3,7 @@ import PostFeed from "../PostFeed";
 // import { notFound } from "next/navigation";
 import { getCurrentUserInfo } from "@/actions/getCurrentUserInfo";
 import { getUserInfo } from "@/actions/getUserInfo";
+import CustomPostFeed from "../CustomPostFeed";
 
 const CustomFeed = async ({}) => {
   const id = await getUserInfo();
@@ -28,6 +29,7 @@ const CustomFeed = async ({}) => {
           Your Past Post
         </h1>
         <PostFeed initialPosts={posts} />
+        {/* <CustomPostFeed initialPosts={posts} /> */}
       </div>
     </>
   );

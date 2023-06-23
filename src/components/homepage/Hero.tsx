@@ -1,13 +1,36 @@
 "use client";
 import Image from "next/image";
-import { FC, MouseEventHandler } from "react";
+import { FC, MouseEventHandler, useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
+import {
+  PassageUserInfo,
+  getCurrentUserInfo,
+} from "@/actions/getCurrentUserInfo";
 
 interface HeroProps {}
 
 const Hero: FC<HeroProps> = ({}) => {
   const router = useRouter();
+  const [userInfo, setUserInfo] = useState<PassageUserInfo | undefined>(
+    undefined
+  );
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchSessionInfo = async () => {
+      const sessionInfo = await getCurrentUserInfo();
+      setUserInfo(sessionInfo.userInfo);
+      setIsLoading(false);
+    };
+
+    fetchSessionInfo();
+  }, []);
+
+  if (isLoading) {
+    // Render loading state if the session information is still being fetched
+    return <div>Loading...</div>;
+  }
   const handleClick: MouseEventHandler<HTMLButtonElement> = () => {
     router.push("/auth");
   };
@@ -30,9 +53,18 @@ const Hero: FC<HeroProps> = ({}) => {
           <h3 className="text-xl mt-5 font-ranadeRegular">
             This is my submission for 1Password X Passage X Hashnode hackathon
           </h3>
-          <Button onClick={handleClick} className="mt-5 w-32">
-            Log In
-          </Button>
+          {!userInfo ? (
+            <Button onClick={handleClick} className="mt-5 w-32">
+              Log In
+            </Button>
+          ) : (
+            <>
+              <h1 className="font-satoshiBold text-lg mt-4">
+                Welcome Back&nbsp;
+                <span className="font-ranadeRegular text-base border border-slate-800 px-2 rounded-lg bg-slate-800 text-neutral-200">{userInfo.email}</span>
+              </h1>
+            </>
+          )}
         </div>
         <div>
           <Image

@@ -10,11 +10,10 @@ interface pageProps {}
 const page: FC<pageProps> = async ({}) => {
   return (
     <>
-     <main className="flex min-h-screen flex-col items-center justify-between p-10">
-
-      <CreatePost />
-      <CustomFeed />
-     </main>
+      <main className="flex min-h-screen flex-col items-center justify-between p-10">
+        <CreatePost />
+        <CustomFeed />
+      </main>
     </>
   );
 };

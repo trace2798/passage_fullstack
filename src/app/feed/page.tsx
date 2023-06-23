@@ -1,3 +1,4 @@
+import CreatePost from "@/components/CreatePost";
 import GeneralFeed from "@/components/homepage/GeneralFeed";
 import { FC } from "react";
 
@@ -11,6 +12,7 @@ const feed: FC<feedProps> = ({}) => {
           <h1 className="font-bold text-4xl text-center">
             Discover Milestones
           </h1>
+          <CreatePost />
           <GeneralFeed />
         </div>
       </main>
