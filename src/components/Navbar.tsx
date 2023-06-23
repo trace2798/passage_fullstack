@@ -34,12 +34,12 @@ const Navbar: FC<NavbarProps> = ({}) => {
 
   return (
     <>
-      <div className="p-5 shadow-md px-[10vw] flex justify-between">
+      <div className="pt-5 shadow-md px-[10vw] flex justify-between">
         {!userInfo ? (
           <div className="w-full flex justify-between">
             <div className="inline-flex items-center">
               <Milestone className="mr-2" />
-              <h1 className="font-black text-xl">Post It</h1>
+              <h1 className="font-satoshiBlack text-xl">Post It</h1>
             </div>
             <Link href="/auth">
               <Button>Log In</Button>
@@ -51,7 +51,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
               <Link href="/">
                 <div className="inline-flex items-center">
                   <Milestone className="mr-2" />
-                  <h1 className="font-black text-xl">Post It</h1>
+                  <h1 className="font-satoshiBlack text-xl">Post It</h1>
                 </div>
               </Link>
               <UserAccountNav
