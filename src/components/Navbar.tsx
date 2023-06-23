@@ -7,6 +7,7 @@ import { FC, useEffect, useState } from "react";
 import { UserAccountNav } from "./UserAccountNav";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { Milestone } from "lucide-react";
 
 interface NavbarProps {}
 
@@ -31,31 +32,32 @@ const Navbar: FC<NavbarProps> = ({}) => {
     return <div>Loading...</div>;
   }
 
-  if (!userInfo) {
-    <div className="p-5 border border-black flex justify-between">
-      <h1>Navbar not logged in </h1>
-      <h1>Log In</h1>
-    </div>;
-  }
-
   return (
     <>
-      <div className="p-5 border border-black flex justify-between">
+      <div className="p-5 shadow-md px-[10vw] flex justify-between">
         {!userInfo ? (
-          <div className="p-5 w-full border border-black inline-flex justify-between">
-            <h1>Post It</h1>
+          <div className="w-full flex justify-between">
+            <div className="inline-flex items-center">
+              <Milestone className="mr-2" />
+              <h1 className="font-black text-xl">Post It</h1>
+            </div>
             <Link href="/auth">
               <Button>Log In</Button>
             </Link>
           </div>
         ) : (
           <>
-            <Link href='/'>Post It</Link>
-            <UserAccountNav
-              email={userInfo?.email}
-              created_at={userInfo?.created_at}
-              login_count={userInfo?.login_count}
-            />
+            <div className="w-full flex justify-between">
+              <div className="inline-flex items-center">
+                <Milestone className="mr-2" />
+                <h1 className="font-black text-xl">Post It</h1>
+              </div>
+              <UserAccountNav
+                email={userInfo?.email}
+                created_at={userInfo?.created_at}
+                login_count={userInfo?.login_count}
+              />
+            </div>
           </>
         )}
       </div>
