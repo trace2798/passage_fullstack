@@ -1,3 +1,4 @@
+"use client";
 import { ExtendedPost } from "@/types/db";
 import { FC } from "react";
 import PostCard from "./PostCard";
@@ -8,7 +9,6 @@ interface PostFeedProps {
 
 const PostFeed: FC<PostFeedProps> = ({ initialPosts }) => {
   const posts = initialPosts;
-
   return (
     <>
       <ul className="flex flex-col col-span-2 space-y-6 p-5 lg:px-[10vw]">

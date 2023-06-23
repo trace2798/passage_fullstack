@@ -7,15 +7,13 @@ import { z } from "zod";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const {  content } = PostValidator.parse(body);
+    const { content } = PostValidator.parse(body);
     const userInfo = await getUserInfo();
     const id = userInfo.props.userID;
 
     if (!id) {
       return new Response("Unauthorized", { status: 401 });
     }
-
-    // verify user is subscribed to passed subreddit id
 
     await db.post.create({
       data: {
@@ -30,9 +28,8 @@ export async function POST(req: Request) {
       return new Response(error.message, { status: 400 });
     }
 
-    return new Response(
-      "Could not post to subreddit at this time. Please try later",
-      { status: 500 }
-    );
+    return new Response("Could not post at this time. Please try later", {
+      status: 500,
+    });
   }
 }

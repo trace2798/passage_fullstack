@@ -60,7 +60,7 @@ const Hero: FC<HeroProps> = ({}) => {
           ) : (
             <>
               <h1 className="font-satoshiBold text-lg mt-4">
-                Welcome Back&nbsp;
+                Welcome Back&nbsp;<br/>
                 <span className="font-ranadeRegular text-base border border-slate-800 px-2 rounded-lg bg-slate-800 text-neutral-200">{userInfo.email}</span>
               </h1>
             </>
