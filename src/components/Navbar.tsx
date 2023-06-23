@@ -34,7 +34,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 
   return (
     <>
-      <div className="pt-5 shadow-md px-[10vw] flex justify-between">
+      <div className="pt-5 pb-2 shadow-md px-[10vw] flex justify-between">
         {!userInfo ? (
           <div className="w-full flex justify-between">
             <div className="inline-flex items-center">
