@@ -40,7 +40,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
           <div className="w-full flex justify-between">
             <div className="inline-flex items-center">
               <Milestone className="mr-2" />
-              <h1 className="font-satoshiBlack text-xl">Post It</h1>
+              <h1 className="font-satoshiBlack text-xl">Post iT</h1>
             </div>
             <div className="inline-flex items-center">
               <ThemeToggle />
@@ -55,7 +55,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
               <Link href="/">
                 <div className="inline-flex items-center">
                   <Milestone className="mr-2" />
-                  <h1 className="font-satoshiBlack text-xl">Post It</h1>
+                  <h1 className="font-satoshiBlack text-xl">Post iT</h1>
                 </div>
               </Link>
               <div className="inline-flex items-center">

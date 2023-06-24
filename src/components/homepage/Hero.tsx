@@ -39,7 +39,7 @@ const Hero: FC<HeroProps> = ({}) => {
       <div className=" my-10 md:mt-44 mx-[10vw] lg:mx-[20vw] flex flex-col-reverse md:flex-row items-center justify-between">
         <div className="md:w-1/2">
           <h1 className="text-5xl font-satoshiBlack">
-            Post it - Milestones, memories, and more
+            Post iT - Milestones, memories, and more
           </h1>
           <h2 className="text-3xl font-satoshiBold mt-10">
             Easily share your milestones, memories and ideas to the world.{" "}
