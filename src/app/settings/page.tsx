@@ -1,14 +1,25 @@
 import { FC } from "react";
 
 import SettingsContent from "@/components/SettingsContent";
+import Image from "next/image";
 
 interface pageProps {}
 
 const page: FC<pageProps> = async ({}) => {
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <SettingsContent />
+      <main className="flex min-h-screen flex-col-reverse md:flex-row items-center justify-evenly p-24">
+        <div>
+          <SettingsContent />
+        </div>
+        <div className="">
+          <Image
+            src="/images/settings.png"
+            alt="settings"
+            width={500}
+            height={500}
+          />
+        </div>
       </main>
     </>
   );

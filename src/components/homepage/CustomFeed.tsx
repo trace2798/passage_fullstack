@@ -24,7 +24,7 @@ const CustomFeed = async ({}) => {
           No Post Found. Create your First Post
         </h1>
         <Image
-          src="/images/no_post.svg"
+          src="/images/create_post.png"
           alt="Empty State"
           width={700}
           height={700}
