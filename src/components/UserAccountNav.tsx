@@ -26,6 +26,7 @@ export function UserAccountNav({ email }: UserAccountNavProps) {
   const handleLogout = () => {
     session.signOut();
     router.push("/");
+    window.location.reload();
   };
   return (
     <DropdownMenu>
