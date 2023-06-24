@@ -12,12 +12,12 @@ const page: FC<pageProps> = async ({}) => {
         <div>
           <SettingsContent />
         </div>
-        <div className="">
+        <div >
           <Image
             src="/images/settings.png"
             alt="settings"
-            width={500}
-            height={500}
+            width={350}
+            height={300}
           />
         </div>
       </main>
