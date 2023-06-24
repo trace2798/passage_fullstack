@@ -10,18 +10,20 @@ import {
 } from "./ui/card";
 import { formatTimeToNow } from "@/lib/utils";
 
+
 interface PostComponentProps {
   post: ExtendedPost;
 }
 
 const PostComponent: FC<PostComponentProps> = async ({ post }) => {
+  
   const formattedTime = formatTimeToNow(post.createdAt);
   return (
     <>
       <Card className="md:w-[50vw]">
         <CardHeader className="flex flex-col md:flex-row justify-between">
           <span className="text-indigo-500 font-ranadeLight text-sm">
-            {post.authorId}
+            @{post.authorId}
           </span>
           <span className="font-ranadeLight text-sm">{formattedTime}</span>
         </CardHeader>

@@ -1,9 +1,6 @@
 import { db } from "@/lib/db";
 import PostFeed from "../PostFeed";
-// import { notFound } from "next/navigation";
-import { getCurrentUserInfo } from "@/actions/getCurrentUserInfo";
 import { getUserInfo } from "@/actions/getUserInfo";
-import CustomPostFeed from "../CustomPostFeed";
 import Image from "next/image";
 
 const CustomFeed = async ({}) => {
@@ -23,7 +20,9 @@ const CustomFeed = async ({}) => {
   if (posts.length === 0) {
     return (
       <>
-        <h1 className="font-ranadeMedium text-lg md:text-2xl lg:py-3">No Post Found. Create your First Post</h1>
+        <h1 className="font-ranadeMedium text-lg md:text-2xl lg:py-3">
+          No Post Found. Create your First Post
+        </h1>
         <Image
           src="/images/no_post.svg"
           alt="Empty State"
