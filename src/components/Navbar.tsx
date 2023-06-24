@@ -35,16 +35,16 @@ const Navbar: FC<NavbarProps> = ({}) => {
 
   return (
     <>
-      <div className="pt-5 pb-2 shadow-md px-[10vw] flex justify-between">
+      <div className="pt-5 pb-2 shadow-md dark:shadow-sm dark:shadow-blue-50 px-[10vw] flex justify-between">
         {!userInfo ? (
           <div className="w-full flex justify-between">
             <div className="inline-flex items-center">
               <Milestone className="mr-2" />
               <h1 className="font-satoshiBlack text-xl">Post It</h1>
             </div>
-            <div>
-              <ThemeToggle/>
-              <Link href="/auth">
+            <div className="inline-flex items-center">
+              <ThemeToggle />
+              <Link href="/auth" className="ml-2">
                 <Button>Log In</Button>
               </Link>
             </div>
@@ -58,13 +58,13 @@ const Navbar: FC<NavbarProps> = ({}) => {
                   <h1 className="font-satoshiBlack text-xl">Post It</h1>
                 </div>
               </Link>
-              <div>
-                <ThemeToggle/>
-              <UserAccountNav
-                email={userInfo?.email}
-                created_at={userInfo?.created_at}
-                login_count={userInfo?.login_count}
-              />
+              <div className="inline-flex items-center">
+                <ThemeToggle />
+                <UserAccountNav
+                  email={userInfo?.email}
+                  created_at={userInfo?.created_at}
+                  login_count={userInfo?.login_count}
+                />
               </div>
             </div>
           </>

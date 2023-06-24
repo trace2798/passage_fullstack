@@ -68,10 +68,11 @@ const Hero: FC<HeroProps> = ({}) => {
         </div>
         <div>
           <Image
-            src="/images/hero.jpg"
+            src="/images/meet.png"
             alt="hero-image"
             width={500}
             height={500}
+            className="rounded-xl"
           />
         </div>
       </div>
