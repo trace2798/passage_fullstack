@@ -15,6 +15,8 @@ import {
 import { format } from "date-fns";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import {BounceLoader} from 'react-spinners'
+
 interface SettingsContentProps {}
 
 const SettingsContent: FC<SettingsContentProps> = ({}) => {
@@ -62,7 +64,22 @@ const SettingsContent: FC<SettingsContentProps> = ({}) => {
 
   if (isLoading) {
     // Render loading state if the session information is still being fetched
-    return <div>Loading...</div>;
+    return (
+      <Card className="w-[350px]">
+        <CardHeader>
+          <CardTitle>User Info</CardTitle>
+          <CardDescription>Your Information</CardDescription>
+        </CardHeader>
+        <CardContent className="grid gap-4">
+          <BounceLoader color="#36d7b7" />
+        </CardContent>
+        <CardFooter>
+          <Button className="w-full">
+            <Link href="/">Back to Home </Link>
+          </Button>
+        </CardFooter>
+      </Card>
+    );
   }
 
   return (

@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { Milestone } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { ClipLoader } from "react-spinners";
 
 interface NavbarProps {}
 
@@ -30,7 +31,24 @@ const Navbar: FC<NavbarProps> = ({}) => {
 
   if (isLoading) {
     // Render loading state if the session information is still being fetched
-    return <div>Loading...</div>;
+    return (
+      <div className="pt-5 pb-2 shadow-md dark:shadow-sm dark:shadow-blue-50 px-[10vw] flex justify-between">
+        <div className="w-full flex justify-between">
+          <div className="inline-flex items-center">
+            <Milestone className="mr-2" />
+            <h1 className="font-satoshiBlack text-xl">Post iT</h1>
+          </div>
+          <div className="inline-flex items-center">
+            <ThemeToggle />
+            <Link href="/auth" className="ml-2">
+              <Button>
+                <ClipLoader color="#36d7b7" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
