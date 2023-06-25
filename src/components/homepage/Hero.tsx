@@ -32,7 +32,7 @@ const Hero: FC<HeroProps> = ({}) => {
   if (isLoading) {
     // Render loading state if the session information is still being fetched
     return (
-      <div className=" my-10 md:mt-44 mx-[10vw] lg:mx-[20vw] flex flex-col-reverse md:flex-row items-center justify-between">
+      <div className="xl:my-44 md:mt-24 mx-[10vw] lg:mx-[20vw] flex flex-col-reverse md:flex-row items-center justify-between">
         <div className="md:w-1/2">
           <h1 className="text-5xl font-satoshiBlack">
             Post iT - Milestones, memories, and more
@@ -63,7 +63,7 @@ const Hero: FC<HeroProps> = ({}) => {
   };
   return (
     <>
-      <div className=" my-10 md:mt-44 mx-[10vw] lg:mx-[20vw] flex flex-col-reverse md:flex-row items-center justify-between">
+      <div className="xl:my-36 md:mt-24 mx-[10vw] lg:mx-[10vw] xl:mx-[15vw] flex flex-col-reverse md:flex-row items-center justify-between">
         <div className="md:w-1/2">
           <h1 className="text-5xl font-satoshiBlack">
             Post iT - Milestones, memories, and more
