@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import Passage from "@passageidentity/passage-node";
 
 export async function middleware(request: NextRequest) {
   //console.log("middleware page with token");
@@ -7,6 +8,16 @@ export async function middleware(request: NextRequest) {
   //console.log(authToken, "auth token");
   if (!authToken) {
     //console.log("middleware no token");
+    return NextResponse.redirect(new URL("/", request.url));
+  }
+  const passage = new Passage({
+    appID: process.env.NEXT_PUBLIC_PASSAGE_APP_ID!,
+  });
+
+  const userID = await passage.validAuthToken(authToken);
+  // console.log(userID, "user token sdk middleware");
+  if (!userID) {
+    // console.log("token invalid ");
     return NextResponse.redirect(new URL("/", request.url));
   }
 }

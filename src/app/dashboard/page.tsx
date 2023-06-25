@@ -14,7 +14,7 @@ interface pageProps {}
 const page: FC<pageProps> = async ({}) => {
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center justify-between p-10 mx-[10vw]">
+      <main className="flex min-h-screen flex-col items-center justify-between p-10 md:mx-[10vw]">
         <div className="flex flex-col lg:flex-row items-center justify-center w-full">
           <CreatePost />
           <div className="w-fit h-fit">
