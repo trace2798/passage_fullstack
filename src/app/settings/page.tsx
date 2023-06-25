@@ -8,11 +8,11 @@ interface pageProps {}
 const page: FC<pageProps> = async ({}) => {
   return (
     <>
-      <main className="flex min-h-screen flex-col-reverse md:flex-row items-center justify-evenly p-24">
+      <main className="flex lg:mt-28 min-h-fit flex-col-reverse md:flex-row items-center justify-evenly p-24">
         <div>
           <SettingsContent />
         </div>
-        <div >
+        <div>
           <Image
             src="/images/settings.png"
             alt="settings"

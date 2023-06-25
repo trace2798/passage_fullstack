@@ -8,6 +8,7 @@ import {
   getCurrentUserInfo,
 } from "@/actions/getCurrentUserInfo";
 import { ClipLoader } from "react-spinners";
+import Link from "next/link";
 
 interface HeroProps {}
 
@@ -88,10 +89,15 @@ const Hero: FC<HeroProps> = ({}) => {
               <h1 className="font-satoshiBold text-lg mt-4">
                 Welcome Back&nbsp;
                 <br />
-                <span className="font-ranadeRegular text-base border border-slate-800 px-2 rounded-lg bg-slate-800 text-neutral-200">
+                <span className="font-ranadeRegular text-base border border-slate-800 rounded-lg bg-slate-800 text-neutral-200">
                   {userInfo.email}
                 </span>
               </h1>
+              <Link href={"/feed"}>
+                <Button variant={"default"} className="mt-4">
+                  Explore Feed
+                </Button>
+              </Link>
             </>
           )}
         </div>

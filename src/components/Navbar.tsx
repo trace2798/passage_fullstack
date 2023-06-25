@@ -7,7 +7,7 @@ import { FC, useEffect, useState } from "react";
 import { UserAccountNav } from "./UserAccountNav";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { Milestone } from "lucide-react";
+import { GithubIcon, Milestone } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { ClipLoader } from "react-spinners";
 
@@ -39,6 +39,12 @@ const Navbar: FC<NavbarProps> = ({}) => {
             <h1 className="font-satoshiBlack text-xl">Post iT</h1>
           </div>
           <div className="inline-flex items-center">
+            <a
+              href="https://github.com/trace2798/passage_fullstack"
+              target="_blank"
+            >
+              <GithubIcon className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-100" />
+            </a>
             <ThemeToggle />
             <Link href="/auth" className="ml-2">
               <Button>
@@ -61,6 +67,12 @@ const Navbar: FC<NavbarProps> = ({}) => {
               <h1 className="font-satoshiBlack text-xl">Post iT</h1>
             </div>
             <div className="inline-flex items-center">
+              <a
+                href="https://github.com/trace2798/passage_fullstack"
+                target="_blank"
+              >
+                <GithubIcon className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-100" />
+              </a>
               <ThemeToggle />
               <Link href="/auth" className="ml-2">
                 <Button>Log In</Button>
@@ -71,12 +83,18 @@ const Navbar: FC<NavbarProps> = ({}) => {
           <>
             <div className="w-full flex justify-between">
               <Link href="/">
-                <div className="inline-flex items-center">
+                <div className="inline-flex items-center hover:cursor-pointer mt-1">
                   <Milestone className="mr-2" />
                   <h1 className="font-satoshiBlack text-xl">Post iT</h1>
                 </div>
               </Link>
               <div className="inline-flex items-center">
+                <a
+                  href="https://github.com/trace2798/passage_fullstack"
+                  target="_blank"
+                >
+                  <GithubIcon className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-100" />
+                </a>
                 <ThemeToggle />
                 <UserAccountNav
                   email={userInfo?.email}

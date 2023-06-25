@@ -15,7 +15,7 @@ import {
 import { format } from "date-fns";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import {BounceLoader} from 'react-spinners'
+import { BounceLoader } from "react-spinners";
 
 interface SettingsContentProps {}
 
@@ -70,7 +70,7 @@ const SettingsContent: FC<SettingsContentProps> = ({}) => {
           <CardTitle>User Info</CardTitle>
           <CardDescription>Your Information</CardDescription>
         </CardHeader>
-        <CardContent className="grid gap-4">
+        <CardContent className="grid gap-4 items-center">
           <BounceLoader color="#36d7b7" />
         </CardContent>
         <CardFooter>

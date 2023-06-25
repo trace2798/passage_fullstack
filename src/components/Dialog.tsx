@@ -7,7 +7,7 @@ export function PostDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">+ Add a Post</Button>
+        <Button variant="default">+ Add a Post</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[800px]">
         <CreatePost />
