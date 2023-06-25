@@ -10,7 +10,7 @@ const LogoutButton: FC<LogoutButtonProps> = ({}) => {
   const passage = new Passage(process.env.NEXT_PUBLIC_PASSAGE_APP_ID!);
   const session = passage.getCurrentSession();
   // const authToken = await session.getAuthToken();
-  console.log(session, "session from logout");
+  //console.log(session, "session from logout");
   const handleLogout = () => {
     session.signOut();
     router.push("/");

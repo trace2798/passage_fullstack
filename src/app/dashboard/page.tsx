@@ -4,6 +4,11 @@ import Image from "next/image";
 
 import { FC } from "react";
 
+export const metadata = {
+  title: "Post iT- Dashboard",
+  description: "Authenticated using Passage."
+}
+
 interface pageProps {}
 
 const page: FC<pageProps> = async ({}) => {

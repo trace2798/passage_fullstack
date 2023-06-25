@@ -13,8 +13,8 @@ export async function getCurrentUserInfo() {
   try {
     const user = passage.getCurrentUser();
     const userInfo = await user.userInfo();
-    console.log(userInfo);
-    console.log(userInfo?.user_metadata, "NAME");
+    //console.log(userInfo);
+    //console.log(userInfo?.user_metadata, "NAME");
     return {
       userInfo,
       email: userInfo?.email,
@@ -23,7 +23,7 @@ export async function getCurrentUserInfo() {
       id: userInfo?.id,
     };
   } catch (error) {
-    console.log(error);
+    //console.log(error);
   }
   return {
     userInfo: undefined,

@@ -14,11 +14,11 @@ import { getCurrentUserInfo } from "./getCurrentUserInfo";
 //   const userData = await response.json();
 
 //   // Use the returned user data
-//   console.log(userData, "USER DATA");
+//   //console.log(userData, "USER DATA");
 // }
 
 export async function getPosyByUserId() {
   const { id } = await getCurrentUserInfo();
-  console.log(id);
+  //console.log(id);
   return id;
 }

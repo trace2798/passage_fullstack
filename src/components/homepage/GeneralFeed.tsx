@@ -7,7 +7,7 @@ const GeneralFeed = async () => {
       createdAt: "desc",
     },
   });
-  console.log(posts);
+  //console.log(posts);
 
   return (
     <>

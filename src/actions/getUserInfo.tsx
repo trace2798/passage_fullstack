@@ -28,7 +28,7 @@ export async function getUserInfo() {
 
     if (userID) {
       // User is authenticated
-      console.log(userID, "cdtsvbhjknscduybcbcd");
+      //console.log(userID, "cdtsvbhjknscduybcbcd");
 
       // Retrieve the user's email and phone number from Passage
       const { email, phone } = await passage.user.get(userID);
@@ -44,7 +44,7 @@ export async function getUserInfo() {
       };
     }
   } catch (error) {
-    console.log(error);
+    //console.log(error);
   }
 
   // Return default props if the user is not authorized

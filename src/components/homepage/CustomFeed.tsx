@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const CustomFeed = async ({}) => {
   const id = await getUserInfo();
-  console.log(id, "IDIDIDDIDI");
+  //console.log(id, "IDIDIDDIDI");
   const userId = id.props.userID;
 
   const posts = await db.post.findMany({
@@ -33,7 +33,7 @@ const CustomFeed = async ({}) => {
     );
   }
 
-  console.log(posts);
+  //console.log(posts);
 
   return (
     <>

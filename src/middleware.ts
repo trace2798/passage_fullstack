@@ -2,11 +2,11 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export async function middleware(request: NextRequest) {
-  console.log("middleware page with token");
+  //console.log("middleware page with token");
   const authToken = request.cookies.get("psg_auth_token")?.value;
-  console.log(authToken, "auth token");
+  //console.log(authToken, "auth token");
   if (!authToken) {
-    console.log("middleware no token");
+    //console.log("middleware no token");
     return NextResponse.redirect(new URL("/", request.url));
   }
 }

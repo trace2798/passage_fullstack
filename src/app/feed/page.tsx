@@ -3,6 +3,11 @@ import { PostDialog } from "@/components/Dialog";
 import GeneralFeed from "@/components/homepage/GeneralFeed";
 import { FC } from "react";
 
+export const metadata = {
+  title: "Post iT- Explore Feed",
+  description: "Authenticated using Passage."
+}
+
 interface feedProps {}
 
 const feed: FC<feedProps> = async ({}) => {

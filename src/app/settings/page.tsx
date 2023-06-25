@@ -3,6 +3,11 @@ import { FC } from "react";
 import SettingsContent from "@/components/SettingsContent";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Post iT- Settings",
+  description: "Authenticated using Passage."
+}
+
 interface pageProps {}
 
 const page: FC<pageProps> = async ({}) => {
