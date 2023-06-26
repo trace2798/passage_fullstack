@@ -63,7 +63,7 @@ const Hero: FC<HeroProps> = ({}) => {
   };
   return (
     <>
-      <div className="xl:my-36 mt-10 md:mt-24 mx-[10vw] lg:mx-[10vw] xl:mx-[15vw] flex flex-col md:flex-row items-center justify-between">
+      <div className="xl:my-36 my-10 md:mt-24 mx-[10vw] lg:mx-[10vw] xl:mx-[15vw] flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/2">
           <h1 className="text-5xl font-satoshiBlack">
             Post iT - Milestones, memories, and more
@@ -117,7 +117,7 @@ const Hero: FC<HeroProps> = ({}) => {
             </>
           )}
         </div>
-        <div className="collapse md:visible">
+        <div className="collapse max-sm:w-0 max-sm:h-0 md:visible">
           <Image
             src="/images/meet.png"
             alt="hero-image"
