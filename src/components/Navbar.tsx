@@ -34,10 +34,12 @@ const Navbar: FC<NavbarProps> = ({}) => {
     return (
       <div className="pt-5 pb-2 shadow-md dark:shadow-sm dark:shadow-blue-50 px-[10vw] flex justify-between">
         <div className="w-full flex justify-between">
-          <div className="inline-flex items-center">
-            <Milestone className="mr-2" />
-            <h1 className="font-satoshiBlack text-xl">Post iT</h1>
-          </div>
+          <Link href="/">
+            <div className="inline-flex items-center hover:cursor-pointer mt-1 ">
+              <Milestone className="mr-2" />
+              <h1 className="font-satoshiBlack text-xl">Post iT</h1>
+            </div>
+          </Link>
           <div className="inline-flex items-center">
             <a
               href="https://github.com/trace2798/passage_fullstack"
@@ -62,10 +64,12 @@ const Navbar: FC<NavbarProps> = ({}) => {
       <div className="pt-5 pb-2 shadow-md dark:shadow-sm dark:shadow-blue-50 px-[10vw] flex justify-between">
         {!userInfo ? (
           <div className="w-full flex justify-between">
-            <div className="inline-flex items-center">
-              <Milestone className="mr-2" />
-              <h1 className="font-satoshiBlack text-xl">Post iT</h1>
-            </div>
+            <Link href="/">
+              <div className="inline-flex items-center hover:cursor-pointer mt-1">
+                <Milestone className="mr-2" />
+                <h1 className="font-satoshiBlack text-xl">Post iT</h1>
+              </div>
+            </Link>
             <div className="inline-flex items-center">
               <a
                 href="https://github.com/trace2798/passage_fullstack"
