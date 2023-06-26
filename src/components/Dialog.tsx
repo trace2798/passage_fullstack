@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
-import CreatePost from "./CreatePost";
+import CreatePostDialog from "./CreatePostDialog";
 
 export function PostDialog() {
   return (
@@ -10,7 +10,7 @@ export function PostDialog() {
         <Button variant="default">+ Add a Post</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[800px]">
-        <CreatePost />
+        <CreatePostDialog />
       </DialogContent>
     </Dialog>
   );

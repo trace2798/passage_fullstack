@@ -12,9 +12,9 @@ const NotFound = () => {
             Looks like you are lost
           </h1>
           <div className="max-md:w-3/4 lg:mr-[20vw] pt-8 flex justify-between">
-            <Link href={"/feed"}>
+            <Link href={"/discover"}>
               <Button variant={"default"} className="">
-                Explore Feed
+                Discover Feed
               </Button>
             </Link>
             <Link href={"/"}>

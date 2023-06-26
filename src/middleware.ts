@@ -18,7 +18,7 @@ export async function middleware(request: NextRequest) {
   // console.log(userID, "user token sdk middleware");
   if (!userID) {
     // console.log("token invalid ");
-    return NextResponse.redirect(new URL("/", request.url));
+    return NextResponse.redirect(new URL("/auth", request.url));
   }
 }
 

@@ -63,11 +63,20 @@ const Hero: FC<HeroProps> = ({}) => {
   };
   return (
     <>
-      <div className="xl:my-36 md:mt-24 mx-[10vw] lg:mx-[10vw] xl:mx-[15vw] flex flex-col-reverse md:flex-row items-center justify-between">
+      <div className="xl:my-36 mt-10 md:mt-24 mx-[10vw] lg:mx-[10vw] xl:mx-[15vw] flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/2">
           <h1 className="text-5xl font-satoshiBlack">
             Post iT - Milestones, memories, and more
           </h1>
+          <div className="md:hidden">
+            <Image
+              src="/images/meet.png"
+              alt="hero-image"
+              width={500}
+              height={500}
+              className="rounded-xl"
+            />
+          </div>
           <h2 className="text-3xl font-satoshiBold mt-10">
             Easily share your milestones, memories and ideas to the world.{" "}
             <br />
@@ -93,15 +102,15 @@ const Hero: FC<HeroProps> = ({}) => {
                   {userInfo.email}
                 </span>
               </h1>
-              <Link href={"/feed"}>
+              <Link href={"/discover"}>
                 <Button variant={"default"} className="mt-4">
-                  Explore Feed
+                  Discover Feed
                 </Button>
               </Link>
             </>
           )}
         </div>
-        <div>
+        <div className="collapse md:visible">
           <Image
             src="/images/meet.png"
             alt="hero-image"

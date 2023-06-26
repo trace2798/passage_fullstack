@@ -4,7 +4,7 @@ import GeneralFeed from "@/components/homepage/GeneralFeed";
 import { FC } from "react";
 
 export const metadata = {
-  title: "Post iT- Explore Feed",
+  title: "Post iT- Discover",
   description: "Authenticated using Passage."
 }
 
