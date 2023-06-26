@@ -87,7 +87,14 @@ const Hero: FC<HeroProps> = ({}) => {
             authentication
           </h2>
           <h3 className="text-xl mt-5 font-ranadeRegular">
-            This is my submission for 1Password X Passage X Hashnode hackathon
+            This is my submission for 1Password X Passage X Hashnode hackathon.{" "}
+            <a
+              href="https://shreyas-chaliha.hashnode.dev/share-your-milestones-and-memories-with-post-it"
+              target="_blank"
+              className="underline hover:cursor-pointer text-base hover:text-indigo-500"
+            >
+              Hashnode Article
+            </a>
           </h3>
           {!userInfo ? (
             <Button onClick={handleClick} className="mt-5 w-32">
