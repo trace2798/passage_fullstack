@@ -54,7 +54,7 @@ const CreatePostDialog: FC<pageProps> = ({}) => {
           <div>
             <p className="text-lg font-satoshiMedium">Content</p>
             <p className="text-xs pb-2 font-ranadeLightItalic">
-              Post cannot be changed.
+              Post can be edited later.
             </p>
             <div className="relative">
               <p className="absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400"></p>

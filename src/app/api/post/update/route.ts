@@ -4,7 +4,7 @@ import { PostUpdateValidator, PostValidator } from "@/lib/validators/post";
 
 import { z } from "zod";
 
-export async function PUT(req: Request) {
+export async function PATCH(req: Request) {
   try {
     const body = await req.json();
     const { content, postId } = PostUpdateValidator.parse(body);

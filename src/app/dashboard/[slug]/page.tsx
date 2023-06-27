@@ -1,7 +1,5 @@
 import UpdatePost from "@/components/UpdatePost";
 import { db } from "@/lib/db";
-import { Trash } from "lucide-react";
-import Image from "next/image";
 import { notFound, useRouter } from "next/navigation";
 
 interface PageProps {
@@ -20,8 +18,6 @@ const page = async ({ params }: PageProps) => {
   return (
     <>
       <div className="my-24 xl:my-44 md:mt-24 mx-[10vw] xl:mx-[20vw]">
-        {/* <DeletePost postId={slug} /> */}
-
         <UpdatePost
           postId={slug}
           content={post.content}

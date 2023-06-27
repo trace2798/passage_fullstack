@@ -27,7 +27,7 @@ const UpdatePost: FC<UpdatePostProps> = ({ postId, content, author_id }) => {
         postId,
       };
 
-      const { data } = await axios.put(`/api/post/update`, payload);
+      const { data } = await axios.patch(`/api/post/update`, payload);
       return data as string;
     },
     onError: (err) => {
@@ -52,13 +52,12 @@ const UpdatePost: FC<UpdatePostProps> = ({ postId, content, author_id }) => {
       <div>
         <div className="w-full flex flex-col md:flex-row items-center h-full mx-auto">
           <Image
-            src="/images/update_page.png"
-            className="rounded-xl"
+            src="/images/update_page.svg"
+            className="rounded-xl bg-neutral-400"
             width={350}
             height={350}
             alt="update post pic"
           />
-
           <div className="relative bg-white dark:bg-slate-800 w-full h-fit p-4 rounded-lg space-y-6 md:ml-10 mt-10">
             <div className="flex justify-between items-center">
               <h1 className="text-xl font-satoshiMedium">Update your post</h1>
@@ -79,13 +78,16 @@ const UpdatePost: FC<UpdatePostProps> = ({ postId, content, author_id }) => {
 
             <div className="flex justify-end gap-4">
               <Button
-                disabled={isLoading}
+                disabled={isLoading || input.length === 0}
                 variant="ghost"
                 onClick={() => router.back()}
               >
                 Cancel
               </Button>
-              <Button disabled={isLoading} onClick={() => updatePost()}>
+              <Button
+                disabled={isLoading || input.length === 0}
+                onClick={() => updatePost()}
+              >
                 Update Post
               </Button>
             </div>

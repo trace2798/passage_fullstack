@@ -3,6 +3,8 @@ import PostFeed from "../PostFeed";
 import { getUserInfo } from "@/actions/getUserInfo";
 import Image from "next/image";
 import CustomPostFeed from "../CustomComponents/CustomPostFeed";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 const CustomFeed = async ({}) => {
   const id = await getUserInfo();
@@ -24,6 +26,9 @@ const CustomFeed = async ({}) => {
         <h1 className="font-ranadeMedium text-lg md:text-2xl lg:py-3">
           No Post Found. Create your First Post
         </h1>
+        <Link href="/create">
+          <Button variant={"default"}>Create</Button>
+        </Link>
         <Image
           src="/images/empty_state.png"
           alt="Empty State"

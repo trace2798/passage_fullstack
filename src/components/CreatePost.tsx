@@ -20,6 +20,7 @@ const CreatePost: FC<pageProps> = ({}) => {
       };
 
       const { data } = await axios.post("/api/post/create", payload);
+      console.log(data, 'DATATATATTA')
       return data as string;
     },
     onError: (err) => {
