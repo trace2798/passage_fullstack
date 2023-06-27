@@ -2,6 +2,7 @@ import { db } from "@/lib/db";
 import PostFeed from "../PostFeed";
 import { getUserInfo } from "@/actions/getUserInfo";
 import Image from "next/image";
+import CustomPostFeed from "../CustomComponents/CustomPostFeed";
 
 const CustomFeed = async ({}) => {
   const id = await getUserInfo();
@@ -24,7 +25,7 @@ const CustomFeed = async ({}) => {
           No Post Found. Create your First Post
         </h1>
         <Image
-          src="/images/create_post.png"
+          src="/images/empty_state.png"
           alt="Empty State"
           width={700}
           height={700}
@@ -42,9 +43,11 @@ const CustomFeed = async ({}) => {
           <h1 className="bg-gradient-to-r bg-clip-text text-transparent from-slate-900  to-slate-200 dark:from-neutral-100 dark:to-gray-800 text-4xl lg:text-5xl text-left w-full lg:px-[10vw] font-satoshiBold">
             Your Milestones
           </h1>
-          <h3 className="text-neutral-400 text-4xl lg:text-5xl lg:px-[10vw] font-satoshiBold">{posts.length}</h3>
+          <h3 className="text-neutral-400 text-4xl lg:text-5xl lg:px-[10vw] font-satoshiBold">
+            {posts.length}
+          </h3>
         </div>
-        <PostFeed initialPosts={posts} />
+        <CustomPostFeed initialPosts={posts} />
         {/* <CustomPostFeed initialPosts={posts} /> */}
       </div>
     </>

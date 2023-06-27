@@ -5,3 +5,12 @@ export const PostValidator = z.object({
 });
 
 export type PostCreationRequest = z.infer<typeof PostValidator>;
+
+
+export const PostUpdateValidator = z.object({
+  content: z.any(),
+  author_id: z.string(),
+  postId: z.string(),
+});
+
+export type PostUpdateRequest = z.infer<typeof PostUpdateValidator>;

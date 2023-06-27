@@ -15,9 +15,9 @@ generator client {
 model Post {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
-
-  content  String @db.VarChar(255)
-  authorId String
+  updatedAt DateTime @updatedAt
+  content   String   @db.VarChar(255)
+  authorId  String
 
   @@index([authorId])
 }
