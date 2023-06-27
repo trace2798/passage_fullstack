@@ -1,6 +1,6 @@
 "use client";
 import { PostUpdateRequest } from "@/lib/validators/post";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { FC, useState } from "react";
 import { toast } from "./ui/use-toast";
 import { useMutation } from "@tanstack/react-query";
@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import Image from "next/image";
+import { useCustomToasts } from "@/hooks/use-custom-toasts";
 
 interface UpdatePostProps {
   postId: string;
@@ -18,7 +19,7 @@ interface UpdatePostProps {
 const UpdatePost: FC<UpdatePostProps> = ({ postId, content, author_id }) => {
   const router = useRouter();
   const [input, setInput] = useState<string>(content);
-
+  const { loginToast } = useCustomToasts();
   const { mutate: updatePost, isLoading } = useMutation({
     mutationFn: async () => {
       const payload: PostUpdateRequest = {
@@ -31,6 +32,11 @@ const UpdatePost: FC<UpdatePostProps> = ({ postId, content, author_id }) => {
       return data as string;
     },
     onError: (err) => {
+      if (err instanceof AxiosError) {
+        if (err.response?.status === 401) {
+          return loginToast();
+        }
+      }
       toast({
         title: "There was an error.",
         description: "Could not update post.",
@@ -38,12 +44,13 @@ const UpdatePost: FC<UpdatePostProps> = ({ postId, content, author_id }) => {
       });
     },
     onSuccess: () => {
-      router.push("/dashboard");
+      router.refresh();
       toast({
         title: "Post updated successfully.",
         description: "Your post has been updated.",
         variant: "default",
       });
+      router.push("/discover");
     },
   });
 
@@ -53,7 +60,7 @@ const UpdatePost: FC<UpdatePostProps> = ({ postId, content, author_id }) => {
         <div className="w-full flex flex-col md:flex-row items-center h-full mx-auto">
           <Image
             src="/images/update_page.svg"
-            className="rounded-xl bg-neutral-400"
+            className="rounded-xl dark:bg-neutral-300"
             width={350}
             height={350}
             alt="update post pic"

@@ -6,10 +6,10 @@ export async function middleware(request: NextRequest) {
   //console.log("middleware page with token");
   const authToken = request.cookies.get("psg_auth_token")?.value;
   //console.log(authToken, "auth token");
-  // if (!authToken) {
-  //   //console.log("middleware no token");
-  //   return NextResponse.redirect(new URL("/", request.url));
-  // }
+  if (!authToken) {
+    //console.log("middleware no token");
+    return NextResponse.redirect(new URL("/", request.url));
+  }
   const passage = new Passage({
     appID: process.env.NEXT_PUBLIC_PASSAGE_APP_ID!,
   });
