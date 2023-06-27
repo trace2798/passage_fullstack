@@ -10,14 +10,20 @@ import {
 } from "./ui/card";
 import { formatTimeToNow } from "@/lib/utils";
 
-
 interface PostComponentProps {
   post: ExtendedPost;
 }
 
 const PostComponent: FC<PostComponentProps> = async ({ post }) => {
-  
-  const formattedTime = formatTimeToNow(post.createdAt);
+  // const formattedTime = formatTimeToNow(post.createdAt);
+  const timeDiff = Math.abs(
+    new Date(post.updatedAt).getTime() - new Date(post.createdAt).getTime()
+  );
+  const formattedTime =
+    timeDiff < 1000
+      ? formatTimeToNow(post.createdAt)
+      : `updated ${formatTimeToNow(post.updatedAt)}`;
+
   return (
     <>
       <Card className="md:w-[50vw]">

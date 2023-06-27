@@ -16,7 +16,7 @@ const CustomFeed = async ({}) => {
       authorId: userId, // Corrected assignment syntax
     },
     orderBy: {
-      createdAt: "desc",
+      updatedAt: "desc",
     },
   });
 

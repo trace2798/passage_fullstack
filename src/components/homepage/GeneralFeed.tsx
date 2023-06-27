@@ -4,7 +4,7 @@ import PostFeed from "../PostFeed";
 const GeneralFeed = async () => {
   const posts = await db.post.findMany({
     orderBy: {
-      createdAt: "desc",
+      updatedAt: "desc",
     },
   });
   //console.log(posts);
