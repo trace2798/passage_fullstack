@@ -35,10 +35,7 @@ const PostComponent: FC<PostComponentProps> = ({ post }) => {
             <p className="font-ranadeRegular text-lg">{post.content} </p>
           </CardContent>
           <CardFooter>
-            <p
-              className="text-indigo-500 opacity-0           group-hover:opacity-100 
-  dark:group-hover:text-white font-ranadeLight text-xs flex w-full justify-between"
-            >
+            <p className="text-indigo-500 opacity-0 group-hover:opacity-100 dark:group-hover:text-white font-ranadeLight text-xs flex w-full justify-between">
               Post ID: {post.id}
               <Edit2 className=" " />
             </p>
