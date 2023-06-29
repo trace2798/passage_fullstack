@@ -50,7 +50,7 @@ const CreatePost: FC<pageProps> = ({}) => {
   return (
     <>
       <div className="w-full flex items-center h-full max-w-3xl mx-auto">
-        <div className="relative bg-white dark:bg-slate-800 w-full h-fit p-4 rounded-lg space-y-6">
+        <div className="relative bg-gray-100 dark:bg-slate-800 w-full h-fit p-4 rounded-lg space-y-6">
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-satoshiMedium">
               Create a milestone, memory you want to share.

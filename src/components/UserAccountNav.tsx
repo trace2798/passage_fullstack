@@ -37,7 +37,7 @@ export function UserAccountNav({ email }: UserAccountNavProps) {
           <h1 className="font-semibold text-blg">Menu</h1>
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-white dark:bg-slate-900" align="end">
+      <DropdownMenuContent className="bg-neutral-100 dark:bg-slate-900" align="end">
         <div className="flex items-center justify-start gap-2 p-2">
           <div className="flex flex-col space-y-1 leading-none">
             {email && (

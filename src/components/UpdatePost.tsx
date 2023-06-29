@@ -65,7 +65,7 @@ const UpdatePost: FC<UpdatePostProps> = ({ postId, content, author_id }) => {
             height={350}
             alt="update post pic"
           />
-          <div className="relative bg-white dark:bg-slate-800 w-full h-fit p-4 rounded-lg space-y-6 md:ml-10 mt-10">
+          <div className="relative bg-neutral-100 dark:bg-slate-800 w-full h-fit p-4 rounded-lg space-y-6 md:ml-10 mt-10">
             <div className="flex justify-between items-center">
               <h1 className="text-xl font-satoshiMedium">Update your post</h1>
             </div>
