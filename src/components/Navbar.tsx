@@ -75,6 +75,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
               <a
                 href="https://github.com/trace2798/passage_fullstack"
                 target="_blank"
+                aria-label="github repo link"
               >
                 <Icons.GithubIcon className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-100" />
               </a>
@@ -97,6 +98,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
                 <a
                   href="https://github.com/trace2798/passage_fullstack"
                   target="_blank"
+                  aria-label="github repo link"
                 >
                   <Icons.GithubIcon className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-100" />
                 </a>
