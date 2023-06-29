@@ -7,9 +7,9 @@ import { FC, useEffect, useState } from "react";
 import { UserAccountNav } from "./UserAccountNav";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { GithubIcon, Milestone } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { ClipLoader } from "react-spinners";
+import { Icons } from "./Icons";
 
 interface NavbarProps {}
 
@@ -36,7 +36,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         <div className="w-full flex justify-between">
           <Link href="/">
             <div className="inline-flex items-center hover:cursor-pointer mt-1 ">
-              <Milestone className="mr-2" />
+              <Icons.Milestone className="mr-2" />
               <h1 className="font-satoshiBlack text-xl">Post iT</h1>
             </div>
           </Link>
@@ -46,7 +46,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
               target="_blank"
               aria-label="github repo link"
             >
-              <GithubIcon className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-100" />
+              <Icons.GithubIcon className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-100" />
             </a>
             <ThemeToggle />
             <Link href="/auth" className="ml-2">
@@ -67,7 +67,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
           <div className="w-full flex justify-between">
             <Link href="/">
               <div className="inline-flex items-center hover:cursor-pointer mt-1">
-                <Milestone className="mr-2" />
+                <Icons.Milestone className="mr-2" />
                 <h1 className="font-satoshiBlack text-xl">Post iT</h1>
               </div>
             </Link>
@@ -76,7 +76,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
                 href="https://github.com/trace2798/passage_fullstack"
                 target="_blank"
               >
-                <GithubIcon className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-100" />
+                <Icons.GithubIcon className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-100" />
               </a>
               <ThemeToggle />
               <Link href="/auth" className="ml-2">
@@ -89,7 +89,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
             <div className="w-full flex justify-between">
               <Link href="/">
                 <div className="inline-flex items-center hover:cursor-pointer mt-1">
-                  <Milestone className="mr-2" />
+                  <Icons.Milestone className="mr-2" />
                   <h1 className="font-satoshiBlack text-xl">Post iT</h1>
                 </div>
               </Link>
@@ -98,7 +98,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
                   href="https://github.com/trace2798/passage_fullstack"
                   target="_blank"
                 >
-                  <GithubIcon className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-100" />
+                  <Icons.GithubIcon className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-100" />
                 </a>
                 <ThemeToggle />
                 <UserAccountNav

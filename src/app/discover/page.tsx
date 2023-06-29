@@ -1,6 +1,6 @@
 import { getUserInfo } from "@/actions/getUserInfo";
 import { PostDialog } from "@/components/Dialog";
-import GeneralFeed from "@/components/homepage/GeneralFeed";
+import GeneralFeed from "@/components/feed/GeneralFeed";
 import { FC } from "react";
 
 export const metadata = {

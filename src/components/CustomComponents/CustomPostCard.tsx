@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import { formatTimeToNow } from "@/lib/utils";
 import { Post } from "@prisma/client";
-import { Cog, Edit2 } from "lucide-react";
+import Icons from "../Icons";
 
 interface PostComponentProps {
   post: Post;
@@ -37,7 +37,7 @@ const PostComponent: FC<PostComponentProps> = ({ post }) => {
           <CardFooter>
             <p className="text-indigo-500 opacity-0 group-hover:opacity-100 dark:group-hover:text-white font-ranadeLight text-xs flex w-full justify-between">
               Post ID: {post.id}
-              <Edit2 className=" " />
+              <Icons.Edit2 className=" " />
             </p>
           </CardFooter>
         </Card>

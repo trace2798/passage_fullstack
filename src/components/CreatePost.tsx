@@ -44,7 +44,7 @@ const CreatePost: FC<pageProps> = ({}) => {
         variant: "default",
       });
       setInput("");
-      router.push('/discover')
+      router.push("/discover");
     },
   });
   return (

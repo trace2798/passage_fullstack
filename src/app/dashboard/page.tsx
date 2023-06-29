@@ -1,5 +1,4 @@
-import CreatePost from "@/components/CreatePost";
-import CustomFeed from "@/components/homepage/CustomFeed";
+import CustomFeed from "@/components/feed/CustomFeed";
 import Image from "next/image";
 
 import { FC } from "react";

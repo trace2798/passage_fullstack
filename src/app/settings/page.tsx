@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export const metadata = {
   title: "Post iT- Settings",
-  description: "Authenticated using Passage."
-}
+  description: "Authenticated using Passage.",
+};
 
 interface pageProps {}
 

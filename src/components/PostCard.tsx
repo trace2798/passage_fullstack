@@ -22,12 +22,14 @@ const PostComponent: FC<PostComponentProps> = async ({ post }) => {
   const formattedTime =
     timeDiff < 1000
       ? formatTimeToNow(post.createdAt)
-      : `updated ${formatTimeToNow(post.updatedAt)}`;
+      : `updated ${formatTimeToNow(post.updatedAt)} created ${formatTimeToNow(
+          post.createdAt
+        )} `;
 
   return (
     <>
       <Card className="md:w-[50vw]">
-        <CardHeader className="flex flex-col md:flex-row justify-between">
+        <CardHeader className="flex flex-col lg:flex-row justify-between">
           <span className="text-indigo-500 font-ranadeLight text-sm">
             @{post.authorId}
           </span>

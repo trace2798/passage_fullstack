@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Passage } from "@passageidentity/passage-js";
 import { useRouter } from "next/navigation";
-import { MenuSquare } from "lucide-react";
+import Icons from "./Icons";
+
 
 interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
   email: string | undefined;
@@ -32,7 +33,7 @@ export function UserAccountNav({ email }: UserAccountNavProps) {
     <DropdownMenu>
       <DropdownMenuTrigger>
         <div className="inline-flex items-center p-2">
-          <MenuSquare className="mr-2" />
+          <Icons.MenuSquare className="mr-2" />
           <h1 className="font-semibold text-blg">Menu</h1>
         </div>
       </DropdownMenuTrigger>

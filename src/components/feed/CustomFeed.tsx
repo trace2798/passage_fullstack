@@ -1,5 +1,4 @@
 import { db } from "@/lib/db";
-import PostFeed from "../PostFeed";
 import { getUserInfo } from "@/actions/getUserInfo";
 import Image from "next/image";
 import CustomPostFeed from "../CustomComponents/CustomPostFeed";
