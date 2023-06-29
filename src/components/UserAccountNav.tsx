@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Passage } from "@passageidentity/passage-js";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Icons from "./Icons";
 
 
@@ -21,13 +21,13 @@ interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export function UserAccountNav({ email }: UserAccountNavProps) {
-  // const router = useRouter();
+  const router = useRouter();
   const passage = new Passage(process.env.NEXT_PUBLIC_PASSAGE_APP_ID!);
   const session = passage.getCurrentSession();
   console.log(session, 'session SESSION')
   const handleLogout = () => {
     session.signOut();
-    // router.push("/");
+    router.push("/");
     window.location.reload();
   };
   return (

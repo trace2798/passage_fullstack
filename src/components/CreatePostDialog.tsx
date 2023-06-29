@@ -7,12 +7,14 @@ import axios, { AxiosError } from "axios";
 import { useRouter } from "next/navigation";
 import { FC, useState } from "react";
 import { toast } from "./ui/use-toast";
+import { useCustomToasts } from "@/hooks/use-custom-toasts";
 
 interface pageProps {}
 
 const CreatePostDialog: FC<pageProps> = ({}) => {
   const router = useRouter();
   const [input, setInput] = useState<string>("");
+  const { loginToast } = useCustomToasts();
   const { mutate: createPost, isLoading } = useMutation({
     mutationFn: async () => {
       const payload: PostCreationRequest = {
@@ -23,6 +25,11 @@ const CreatePostDialog: FC<pageProps> = ({}) => {
       return data as string;
     },
     onError: (err) => {
+      if (err instanceof AxiosError) {
+        if (err.response?.status === 401) {
+          return loginToast();
+        }
+      }
       toast({
         title: "There was an error.",
         description: "Could not create post.",
