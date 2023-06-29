@@ -19,7 +19,7 @@ interface UpdatePostProps {
 const UpdatePost: FC<UpdatePostProps> = ({ postId, content, author_id }) => {
   const router = useRouter();
   const [input, setInput] = useState<string>(content);
-  const { loginToast } = useCustomToasts();
+  const { loginToast, forbiddenToast } = useCustomToasts();
   const { mutate: updatePost, isLoading } = useMutation({
     mutationFn: async () => {
       const payload: PostUpdateRequest = {
@@ -35,6 +35,9 @@ const UpdatePost: FC<UpdatePostProps> = ({ postId, content, author_id }) => {
       if (err instanceof AxiosError) {
         if (err.response?.status === 401) {
           return loginToast();
+        }
+        if (err.response?.status === 403) {
+          return forbiddenToast();
         }
       }
       toast({

@@ -24,7 +24,7 @@ export function UserAccountNav({ email }: UserAccountNavProps) {
   const router = useRouter();
   const passage = new Passage(process.env.NEXT_PUBLIC_PASSAGE_APP_ID!);
   const session = passage.getCurrentSession();
-  console.log(session, 'session SESSION')
+  // console.log(session, 'session SESSION')
   const handleLogout = () => {
     session.signOut();
     router.push("/");

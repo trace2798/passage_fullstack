@@ -21,5 +21,13 @@ export const useCustomToasts = () => {
     });
   };
 
-  return { loginToast };
+  const forbiddenToast = () => {
+    const { dismiss } = toast({
+      title: "Forbidden. But good try hacker.",
+      description: "You can only update your own post.",
+      variant: "destructive",
+    });
+  };
+
+  return { loginToast, forbiddenToast };
 };

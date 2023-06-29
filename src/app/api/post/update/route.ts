@@ -15,6 +15,14 @@ export async function PATCH(req: Request) {
       return new Response("Unauthorized", { status: 401 });
     }
 
+    // Fetch the post from the database
+    const post = await db.post.findUnique({ where: { id: postId } });
+
+    // Check if the authorId of the post matches the id of the user
+    if (post?.authorId !== id) {
+      return new Response("Forbidden", { status: 403 });
+    }
+
     await db.post.update({
       where: { id: postId },
       data: {
