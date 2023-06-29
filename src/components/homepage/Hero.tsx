@@ -75,6 +75,7 @@ const Hero: FC<HeroProps> = ({}) => {
               width={500}
               height={500}
               className="rounded-xl"
+              loading="lazy"
             />
           </div>
           <h2 className="text-3xl font-satoshiBold mt-10">
