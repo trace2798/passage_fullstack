@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/config/site";
+import Box from "@/components/Box";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -43,6 +44,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Navbar />
+          
           {children}
         </Providers>
         <Toaster />

@@ -38,11 +38,7 @@ const PostComponent: FC<PostComponentProps> = async ({ post }) => {
         <CardContent>
           <p className="font-ranadeRegular text-lg">{post.content} </p>
         </CardContent>
-        <CardFooter>
-          <p className="text-indigo-500 font-ranadeLight text-xs">
-            Post ID:&nbsp;{post.id}
-          </p>
-        </CardFooter>
+        <CardFooter></CardFooter>
       </Card>
     </>
   );

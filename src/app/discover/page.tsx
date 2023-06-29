@@ -1,12 +1,13 @@
 import { getUserInfo } from "@/actions/getUserInfo";
+import Box from "@/components/Box";
 import { PostDialog } from "@/components/Dialog";
 import GeneralFeed from "@/components/feed/GeneralFeed";
 import { FC } from "react";
 
 export const metadata = {
   title: "Post iT- Discover",
-  description: "Authenticated using Passage."
-}
+  description: "Authenticated using Passage.",
+};
 
 interface feedProps {}
 
@@ -41,6 +42,7 @@ const feed: FC<feedProps> = async ({}) => {
           <PostDialog />
         </div>
         <GeneralFeed />
+        <Box/>
       </main>
     </>
   );
