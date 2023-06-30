@@ -55,4 +55,4 @@ Running commands with npm `npm run [command]`
 ## For env value and functionality of this application I have wrote a very detailed article on [hashnode](https://shreyas-chaliha.hashnode.dev/share-your-milestones-and-memories-with-post-it)
 
 
-Youtube Demo Link: [Post iT](https://youtu.be/iXuKCdvHBLY)
+Youtube Demo Link: [Post iT](https://www.youtube.com/watch?v=iXuKCdvHBLY)
