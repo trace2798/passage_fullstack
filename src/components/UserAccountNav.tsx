@@ -27,8 +27,7 @@ export function UserAccountNav({ email }: UserAccountNavProps) {
   // console.log(session, 'session SESSION')
   const handleLogout = () => {
     session.signOut();
-    router.push("/");
-    // window.location.reload();
+
     onSuccess();
   };
   const onSuccess = () => {
@@ -37,6 +36,8 @@ export function UserAccountNav({ email }: UserAccountNavProps) {
       description: "You have successfully signed out.",
       variant: "signout",
     });
+    router.push("/");
+    // window.location.reload();
   };
 
   return (
