@@ -10,8 +10,8 @@
 
 ### Prerequisites
 
--Node version 16.8 or later
--macOS, Windows (including WSL), and Linux are supported.
+**Node version 16.8 or later  
+**macOS, Windows (including WSL), and Linux are supported.
 
 ### To directly clone the repo
 
@@ -32,7 +32,7 @@ NEXT_PUBLIC_PASSAGE_APP_ID=
 NEXT_PUBLIC_PASSAGE_API_KEY=
 DATABASE_URL=
 ```
-Disclamer: Recently, when I named my env file as .env.local I ran into some problems with prisma so if you face similar problem just name is as .env and do not forget to add it to your .gitignore. After adding .env to your gitignore and if the .env file is getting pushed with your commit then check this [link out]( https://stackoverflow.com/questions/74340379/gitignore-not-working-my-environment-variables-are-being-pushed-to-my-repo-whe)
+<b>Disclamer:</b> Recently, when I named my env file as .env.local I ran into some problems with prisma so if you face similar problem just name is as .env and do not forget to add it to your .gitignore. After adding .env to your gitignore and if the .env file is getting pushed with your commit then check this [link out]( https://stackoverflow.com/questions/74340379/gitignore-not-working-my-environment-variables-are-being-pushed-to-my-repo-whe)
 
 ### Start the app
 
