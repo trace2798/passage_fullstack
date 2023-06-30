@@ -67,6 +67,17 @@ const Hero: FC<HeroProps> = ({}) => {
         <div className="md:w-1/2">
           <h1 className="text-5xl font-satoshiBlack">
             Post iT - Milestones, memories, and more
+            <br />
+            <h2 className="text-3xl mt-5">
+              Authentication with{" "}
+              <a
+                href="https://passage.1password.com/"
+                target="_blank"
+                className=" hover:underline font-satoshiBlack bg-gradient-to-r bg-clip-text text-transparent from-yellow-500 via-purple-500 to-red-500 animate-text"
+              >
+                Passage by 1Password
+              </a>
+            </h2>
           </h1>
           <div className="md:hidden">
             <Image
@@ -80,16 +91,6 @@ const Hero: FC<HeroProps> = ({}) => {
           </div>
           <h2 className="text-3xl font-satoshiBold mt-10">
             Easily share your milestones, memories and ideas to the world.{" "}
-            <br />
-            Authentication with{" "}
-            <a
-              href="https://passage.1password.com/"
-              target="_blank"
-              className="hover:underline font-satoshiBlack bg-gradient-to-r bg-clip-text text-transparent from-yellow-500 via-purple-500 to-red-500 animate-text"
-            >
-              Passage by 1Password
-            </a>
-          
           </h2>
           <h3 className="text-xl mt-5 font-ranadeRegular">
             This is my submission for 1Password X Passage X Hashnode hackathon.{" "}

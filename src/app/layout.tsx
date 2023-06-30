@@ -44,7 +44,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Navbar />
-
           <div className="mt-14">{children}</div>
         </Providers>
         <Toaster />
