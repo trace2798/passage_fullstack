@@ -10,8 +10,8 @@
 
 ### Prerequisites
 
-**Node version 16.8 or later
-**macOS, Windows (including WSL), and Linux are supported.
+-Node version 16.8 or later
+-macOS, Windows (including WSL), and Linux are supported.
 
 ### To directly clone the repo
 
