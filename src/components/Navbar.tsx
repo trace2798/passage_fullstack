@@ -62,7 +62,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 
   return (
     <>
-      <div className="pt-5 pb-2 shadow-md dark:shadow-sm dark:shadow-blue-50 px-[10vw] flex justify-between">
+      <div className="pt-5 pb-2 shadow-md dark:shadow-sm dark:shadow-blue-50 px-[10vw] flex justify-between fixed top-0 left-0 w-full backdrop-blur-sm">
         {!userInfo ? (
           <div className="w-full flex justify-between">
             <Link href="/">
@@ -87,7 +87,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
           </div>
         ) : (
           <>
-            <div className="w-full flex justify-between">
+            <div className="w-full flex justify-between ">
               <Link href="/">
                 <div className="inline-flex items-center hover:cursor-pointer mt-1">
                   <Icons.Milestone className="mr-2" />
