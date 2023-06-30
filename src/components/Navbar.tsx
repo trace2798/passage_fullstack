@@ -32,7 +32,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
   if (isLoading) {
     // Render loading state if the session information is still being fetched
     return (
-      <div className="pt-5 pb-2 shadow-md dark:shadow-sm dark:shadow-blue-50 px-[10vw] flex justify-between">
+      <div className="pt-5 pb-2 shadow-md dark:shadow-sm dark:shadow-blue-50 px-[10vw] flex justify-between fixed top-0 left-0 w-full backdrop-blur-sm">
         <div className="w-full flex justify-between">
           <Link href="/">
             <div className="inline-flex items-center hover:cursor-pointer mt-1 ">
