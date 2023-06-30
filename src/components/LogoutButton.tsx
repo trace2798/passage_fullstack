@@ -1,7 +1,7 @@
 "use client";
+import { Passage } from "@passageidentity/passage-js";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
-import { Passage } from "@passageidentity/passage-js";
 
 interface LogoutButtonProps {}
 

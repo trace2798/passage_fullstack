@@ -3,13 +3,13 @@ import {
   PassageUserInfo,
   getCurrentUserInfo,
 } from "@/actions/getCurrentUserInfo";
-import { FC, useEffect, useState } from "react";
-import { UserAccountNav } from "./UserAccountNav";
 import Link from "next/link";
-import { Button } from "./ui/button";
-import { ThemeToggle } from "./ThemeToggle";
+import { FC, useEffect, useState } from "react";
 import { ClipLoader } from "react-spinners";
 import { Icons } from "./Icons";
+import { ThemeToggle } from "./ThemeToggle";
+import { UserAccountNav } from "./UserAccountNav";
+import { Button } from "./ui/button";
 
 interface NavbarProps {}
 

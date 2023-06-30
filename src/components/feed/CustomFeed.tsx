@@ -1,9 +1,9 @@
-import { db } from "@/lib/db";
 import { getUserInfo } from "@/actions/getUserInfo";
+import { db } from "@/lib/db";
 import Image from "next/image";
+import Link from "next/link";
 import CustomPostFeed from "../CustomComponents/CustomPostFeed";
 import { Button } from "../ui/button";
-import Link from "next/link";
 
 const CustomFeed = async ({}) => {
   const id = await getUserInfo();

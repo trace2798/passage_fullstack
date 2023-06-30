@@ -1,6 +1,6 @@
 import { getUserInfo } from "@/actions/getUserInfo";
 import { db } from "@/lib/db";
-import { PostUpdateValidator, PostValidator } from "@/lib/validators/post";
+import { PostUpdateValidator } from "@/lib/validators/post";
 
 import { z } from "zod";
 

@@ -1,14 +1,14 @@
 "use client";
+import { useCustomToasts } from "@/hooks/use-custom-toasts";
 import { PostUpdateRequest } from "@/lib/validators/post";
-import axios, { AxiosError } from "axios";
-import { FC, useState } from "react";
-import { toast } from "./ui/use-toast";
 import { useMutation } from "@tanstack/react-query";
+import axios, { AxiosError } from "axios";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { FC, useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import Image from "next/image";
-import { useCustomToasts } from "@/hooks/use-custom-toasts";
+import { toast } from "./ui/use-toast";
 
 interface UpdatePostProps {
   postId: string;

@@ -1,6 +1,6 @@
 import UpdatePost from "@/components/UpdatePost";
 import { db } from "@/lib/db";
-import { notFound, useRouter } from "next/navigation";
+import { notFound } from "next/navigation";
 
 interface PageProps {
   params: {

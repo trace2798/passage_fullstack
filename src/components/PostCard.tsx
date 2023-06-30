@@ -1,14 +1,12 @@
+import { formatTimeToNow } from "@/lib/utils";
 import { ExtendedPost } from "@/types/db";
 import { FC } from "react";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
-  CardHeader,
-  CardTitle,
+  CardHeader
 } from "./ui/card";
-import { formatTimeToNow } from "@/lib/utils";
 
 interface PostComponentProps {
   post: ExtendedPost;

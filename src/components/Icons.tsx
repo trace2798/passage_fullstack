@@ -1,11 +1,11 @@
 import {
+  Edit2,
+  GithubIcon,
+  Laptop,
+  MenuSquare,
+  Milestone,
   Moon,
   Sun,
-  Laptop,
-  GithubIcon,
-  Milestone,
-  MenuSquare,
-  Edit2,
 } from "lucide-react";
 
 export const Icons = {

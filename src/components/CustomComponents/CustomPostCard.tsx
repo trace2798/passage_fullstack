@@ -1,8 +1,8 @@
-import { FC } from "react";
-import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import { formatTimeToNow } from "@/lib/utils";
 import { Post } from "@prisma/client";
+import { FC } from "react";
 import Icons from "../Icons";
+import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 
 interface PostComponentProps {
   post: Post;

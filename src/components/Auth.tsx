@@ -1,6 +1,5 @@
 "use client";
 import { FC, useEffect } from "react";
-import { toast } from "./ui/use-toast";
 
 interface AuthProps {}
 

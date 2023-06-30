@@ -1,5 +1,8 @@
 "use client";
-import { FC, useEffect, useState } from "react";
+import {
+  PassageUserInfo,
+  getCurrentUserInfo,
+} from "@/actions/getCurrentUserInfo";
 import {
   Card,
   CardContent,
@@ -8,14 +11,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  PassageUserInfo,
-  getCurrentUserInfo,
-} from "@/actions/getCurrentUserInfo";
 import { format } from "date-fns";
-import { Button } from "./ui/button";
 import Link from "next/link";
+import { FC, useEffect, useState } from "react";
 import { BounceLoader } from "react-spinners";
+import { Button } from "./ui/button";
 
 interface SettingsContentProps {}
 

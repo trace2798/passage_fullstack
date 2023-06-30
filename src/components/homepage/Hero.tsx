@@ -1,14 +1,14 @@
 "use client";
-import Image from "next/image";
-import { FC, MouseEventHandler, useEffect, useState } from "react";
-import { Button } from "../ui/button";
-import { useRouter } from "next/navigation";
 import {
   PassageUserInfo,
   getCurrentUserInfo,
 } from "@/actions/getCurrentUserInfo";
-import { ClipLoader } from "react-spinners";
+import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { FC, MouseEventHandler, useEffect, useState } from "react";
+import { ClipLoader } from "react-spinners";
+import { Button } from "../ui/button";
 
 interface HeroProps {}
 
