@@ -47,10 +47,12 @@ const CustomFeed = async ({}) => {
           <h1 className="bg-gradient-to-r bg-clip-text text-transparent from-slate-900  to-slate-200 dark:from-neutral-100 dark:to-gray-800 text-4xl lg:text-5xl text-left w-full lg:px-[10vw] font-satoshiBold">
             Your Milestones
           </h1>
+
           <h3 className="text-neutral-400 text-4xl lg:text-5xl lg:px-[10vw] font-satoshiBold">
             {posts.length}
           </h3>
         </div>
+        <h2 className="text-left text-sm text-slate-700 dark:text-neutral-400 w-full lg:px-[11vw] font-ranadeMedium">You can click on the post here to update it.</h2>
         <CustomPostFeed initialPosts={posts} />
         {/* <CustomPostFeed initialPosts={posts} /> */}
       </div>
