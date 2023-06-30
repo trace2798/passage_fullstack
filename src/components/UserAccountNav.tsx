@@ -12,7 +12,7 @@ import {
 import { Passage } from "@passageidentity/passage-js";
 import { useRouter } from "next/navigation";
 import Icons from "./Icons";
-
+import { toast } from "./ui/use-toast";
 
 interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
   email: string | undefined;
@@ -29,7 +29,16 @@ export function UserAccountNav({ email }: UserAccountNavProps) {
     session.signOut();
     router.push("/");
     window.location.reload();
+    onSuccess();
   };
+  const onSuccess = () => {
+    toast({
+      title: "Sign Out Successful.",
+      description: "You have successfully signed out.",
+      variant: "signout",
+    });
+  };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -38,7 +47,10 @@ export function UserAccountNav({ email }: UserAccountNavProps) {
           <h1 className="font-semibold text-blg">Menu</h1>
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-neutral-100 dark:bg-slate-900" align="end">
+      <DropdownMenuContent
+        className="bg-neutral-100 dark:bg-slate-900"
+        align="end"
+      >
         <div className="flex items-center justify-start gap-2 p-2">
           <div className="flex flex-col space-y-1 leading-none">
             {email && (
