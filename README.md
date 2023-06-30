@@ -10,7 +10,8 @@
 
 ### Prerequisites
 
-**Node version 14.x**
+**Node version 16.8 or later
+**macOS, Windows (including WSL), and Linux are supported.
 
 ### To directly clone the repo
 
@@ -31,6 +32,7 @@ NEXT_PUBLIC_PASSAGE_APP_ID=
 NEXT_PUBLIC_PASSAGE_API_KEY=
 DATABASE_URL=
 ```
+Disclamer: Recently, when I named my env file as .env.local I ran into some problems with prisma so if you face similar problem just name is as .env and do not forget to add it to your .gitignore. After adding .env to your gitignore and if the .env file is getting pushed with your commit then check this [link out]( https://stackoverflow.com/questions/74340379/gitignore-not-working-my-environment-variables-are-being-pushed-to-my-repo-whe)
 
 ### Start the app
 
@@ -47,6 +49,8 @@ Running commands with npm `npm run [command]`
 | `dev`           | Starts a development instance of the app |
 | `build`         | To build your application                |
 | `start`         | Starts a production  instance of the app |
+
+ "postinstall": "prisma generate" is required if you want to deploy your site.
 
 ## For env value and functionality of this application I have wrote a very detailed article on [hashnode](https://shreyas-chaliha.hashnode.dev/share-your-milestones-and-memories-with-post-it)
 
