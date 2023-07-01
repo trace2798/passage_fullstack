@@ -68,12 +68,13 @@ const Hero: FC<HeroProps> = ({}) => {
           <h1 className="text-5xl font-satoshiBlack">
             Post iT - Milestones, memories, and more
             <br />
+            
             <h2 className="text-3xl mt-5">
               Authentication with{" "}
               <a
                 href="https://passage.1password.com/"
                 target="_blank"
-                className=" hover:underline font-satoshiBlack bg-gradient-to-r bg-clip-text text-transparent from-yellow-500 via-purple-500 to-red-500 animate-text"
+                className="text-2xl md:text-3xl hover:underline font-satoshiBlack bg-gradient-to-r bg-clip-text text-transparent from-yellow-500 via-purple-500 to-red-500 animate-text"
               >
                 Passage by 1Password
               </a>
