@@ -8,6 +8,7 @@ import axios, { AxiosError } from "axios";
 import { useRouter } from "next/navigation";
 import { FC, useState } from "react";
 import { toast } from "./ui/use-toast";
+import Link from "next/link";
 
 interface pageProps {}
 
@@ -61,7 +62,11 @@ const CreatePostDialog: FC<pageProps> = ({}) => {
           <div>
             <p className="text-lg font-satoshiMedium">Content</p>
             <p className="text-xs pb-2 font-ranadeLightItalic">
-              Post can be updated later. Visit Dashboard to update them. <br />
+              Post can be updated later. Visit{" "}
+              <Link href={"/dashboard"} className="underline hover:text-indigo-500">
+                Dashboard
+              </Link>{" "}
+              to update them. <br />
               After Publishing click on X on the top right corner to close the
               modal.
             </p>
