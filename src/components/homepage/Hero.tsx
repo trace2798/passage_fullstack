@@ -68,7 +68,6 @@ const Hero: FC<HeroProps> = ({}) => {
           <h1 className="text-5xl font-satoshiBlack">
             Post iT - Milestones, memories, and more
             <br />
-            
             <h2 className="text-3xl mt-5">
               Authentication with{" "}
               <a

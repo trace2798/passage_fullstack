@@ -1,3 +1,3 @@
-import type { Post } from '@prisma/client'
+import type { Post } from "@prisma/client";
 
-export type ExtendedPost = Post 
+export type ExtendedPost = Post;

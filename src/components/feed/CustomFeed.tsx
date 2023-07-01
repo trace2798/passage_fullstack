@@ -52,7 +52,9 @@ const CustomFeed = async ({}) => {
             {posts.length}
           </h3>
         </div>
-        <h2 className="text-left text-sm text-slate-700 dark:text-neutral-400 w-full lg:px-[11vw] font-ranadeMedium">You can click on your post here to update it.</h2>
+        <h2 className="text-left text-sm text-slate-700 dark:text-neutral-400 w-full lg:px-[11vw] font-ranadeMedium">
+          You can click on your post here to update it.
+        </h2>
         <CustomPostFeed initialPosts={posts} />
         {/* <CustomPostFeed initialPosts={posts} /> */}
       </div>

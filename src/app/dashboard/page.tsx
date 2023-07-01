@@ -5,8 +5,8 @@ import { FC } from "react";
 
 export const metadata = {
   title: "Post iT- Dashboard",
-  description: "Authenticated using Passage."
-}
+  description: "Authenticated using Passage.",
+};
 
 interface pageProps {}
 

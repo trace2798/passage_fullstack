@@ -42,7 +42,7 @@ const feed: FC<feedProps> = async ({}) => {
           <PostDialog />
         </div>
         <GeneralFeed />
-        <Box/>
+        <Box />
       </main>
     </>
   );

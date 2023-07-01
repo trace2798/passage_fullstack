@@ -1,12 +1,7 @@
 import { formatTimeToNow } from "@/lib/utils";
 import { ExtendedPost } from "@/types/db";
 import { FC } from "react";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader
-} from "./ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 
 interface PostComponentProps {
   post: ExtendedPost;
@@ -37,7 +32,10 @@ const PostComponent: FC<PostComponentProps> = async ({ post }) => {
           <p className="font-ranadeRegular text-lg">{post.content} </p>
         </CardContent>
         <CardFooter>
-          <p className="text-indigo-500 font-ranadeLight text-[8px]">Post id: {post.id}</p></CardFooter>
+          <p className="text-indigo-500 font-ranadeLight text-[8px]">
+            Post id: {post.id}
+          </p>
+        </CardFooter>
       </Card>
     </>
   );

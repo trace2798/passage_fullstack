@@ -62,7 +62,7 @@ const CreatePost: FC<pageProps> = ({}) => {
           <div>
             <p className="text-lg font-satoshiMedium">Content</p>
             <p className="text-xs pb-2 font-ranadeLightItalic">
-              Post can be updated.
+              Post can be updated later. Visit Dashboard to update them.
             </p>
             <div className="relative">
               <p className="absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400"></p>
